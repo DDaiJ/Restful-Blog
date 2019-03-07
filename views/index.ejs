@@ -1,13 +1,14 @@
 <% include ./partials/header %>
 
-<h1>Hello</h1>
+<div class="frontspace"></div>
 
 <% blogs.forEach(function(blog){ %>
     <div>
         <h2><%= blog.title %></h2>
-        <img src="<%= blog.image %>">
+        <img class="ui big image" src="<%= blog.image %>">
         <span><%= blog.created%></span>
         <p><%= blog.body%></p>
+        <a href="/blogs/<%= blog._id %>">Read More</a>
     </div>
 
 <% }) %>
